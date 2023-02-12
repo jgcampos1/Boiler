@@ -1,8 +1,8 @@
-import { Container, Text } from "./home-styles";
+import { Container, Text } from './home-styles'
 const Home = () => (
   <Container>
-    <Text>oi sou eu de novo</Text>{" "}
+    <Text>oi sou eu de novo</Text>{' '}
   </Container>
-);
+)
 
-export default Home;
+export default Home

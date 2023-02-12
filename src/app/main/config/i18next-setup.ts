@@ -1,6 +1,6 @@
 import { initReactI18next } from 'react-i18next'
 
-import i18next, { InitOptions } from 'i18next'
+import i18next, { type InitOptions } from 'i18next'
 import Backend from 'i18next-http-backend'
 
 const availableLanguages = ['pt-BR']

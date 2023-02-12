@@ -1,38 +1,35 @@
-import { ReactNode, useEffect, useMemo, useState } from "react";
-import { MdBrightness4, MdBrightness7 } from "react-icons/md";
+import { type ReactNode, useEffect, useMemo, useState } from 'react'
+import { MdBrightness4, MdBrightness7 } from 'react-icons/md'
 
-import {
-  ThemeProvider as MuiThemeProvider,
-  useMediaQuery,
-} from "@mui/material";
+import { ThemeProvider as MuiThemeProvider, useMediaQuery } from '@mui/material'
 
-import { ThemeContext } from "~/app/presentation/contexts";
-import { makeDarkTheme, makeLightTheme } from "~/app/presentation/styles";
+import { ThemeContext } from '~/app/presentation/contexts'
+import { makeDarkTheme, makeLightTheme } from '~/app/presentation/styles'
 
 interface Props {
-  children: ReactNode;
+  children: ReactNode
 }
 const ThemeProvider = ({ children }: Props) => {
-  const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
-  const [theme, setTheme] = useState(makeLightTheme());
+  const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)')
+  const [theme, setTheme] = useState(makeLightTheme())
 
   useEffect(() => {
     if (prefersDarkMode) {
-      setTheme(makeDarkTheme());
+      setTheme(makeDarkTheme())
     }
-  }, [prefersDarkMode]);
+  }, [prefersDarkMode])
 
   const toggleTheme = (): void => {
     const newTheme =
-      theme.palette.mode === "light" ? makeDarkTheme() : makeLightTheme();
-    setTheme(newTheme);
-  };
+      theme.palette.mode === 'light' ? makeDarkTheme() : makeLightTheme()
+    setTheme(newTheme)
+  }
 
   const themeMode = useMemo(
     () =>
-      theme.palette.mode === "light" ? <MdBrightness4 /> : <MdBrightness7 />,
+      theme.palette.mode === 'light' ? <MdBrightness4 /> : <MdBrightness7 />,
     [theme.palette.mode]
-  );
+  )
 
   return (
     <MuiThemeProvider theme={theme}>
@@ -40,7 +37,7 @@ const ThemeProvider = ({ children }: Props) => {
         {children}
       </ThemeContext.Provider>
     </MuiThemeProvider>
-  );
-};
+  )
+}
 
-export default ThemeProvider;
+export default ThemeProvider

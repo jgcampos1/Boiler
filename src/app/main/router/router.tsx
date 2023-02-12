@@ -1,13 +1,13 @@
-import { memo } from "react";
+import { memo } from 'react'
 
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter } from 'react-router-dom'
 
-import { CssBaseline } from "@mui/material";
+import { CssBaseline } from '@mui/material'
 
-import { ThemeProvider } from "~/app/presentation/providers";
+import { ThemeProvider } from '~/app/presentation/providers'
 
-import { RoutesConfig } from "../config/routes-config";
-import { makeRoutes } from "../factories/routes";
+import { RoutesConfig } from '../config/routes-config'
+import { makeRoutes } from '../factories/routes'
 
 const Router = () => {
   return (
@@ -17,7 +17,7 @@ const Router = () => {
         {makeRoutes(RoutesConfig)}
       </BrowserRouter>
     </ThemeProvider>
-  );
-};
+  )
+}
 
-export default memo(Router);
+export default memo(Router)

@@ -1,18 +1,18 @@
-import { Params } from "react-router";
-import { generatePath } from "react-router-dom";
+import { type Params } from 'react-router'
+import { generatePath } from 'react-router-dom'
 
-import { RoutesConfig } from "~/app/main/config/routes-config";
+import { RoutesConfig } from '~/app/main/config/routes-config'
 
 enum RoutesNames {
-  HOME = "home",
+  HOME = 'home'
 }
 
 type AppRouteType = {
   [key in RoutesNames]: {
-    path: string;
-    navigate: <S extends string>(params?: Params<S>) => string;
-  };
-};
+    path: string
+    navigate: <S extends string>(params?: Params<S>) => string
+  }
+}
 
 const MakeAppRoutes = () =>
   RoutesConfig.reduce<Partial<AppRouteType>>(
@@ -21,10 +21,10 @@ const MakeAppRoutes = () =>
       [current.name]: {
         path: current.path,
         navigate: <S extends string>(params?: Params<S>) =>
-          generatePath(current.path, params),
-      },
+          generatePath(current.path, params)
+      }
     }),
     {}
-  );
+  )
 
-export const AppRoutes = MakeAppRoutes();
+export const AppRoutes = MakeAppRoutes()

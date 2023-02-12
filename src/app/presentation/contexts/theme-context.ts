@@ -1,5 +1,5 @@
-import { createContext } from "react";
+import { createContext } from 'react'
 
-import { ThemeContextType } from "~/app/presentation/common/types";
+import { type ThemeContextType } from '~/app/presentation/common/types'
 
-export default createContext<ThemeContextType>(null);
+export default createContext<ThemeContextType>(null)

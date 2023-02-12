@@ -1,6 +1,6 @@
-import { ReactNode } from "react";
+import { type ReactNode } from 'react'
 
 export type ThemeContextType = {
-  toggleTheme: () => void;
-  mode: string | ReactNode;
-} | null;
+  toggleTheme: () => void
+  mode: string | ReactNode
+} | null

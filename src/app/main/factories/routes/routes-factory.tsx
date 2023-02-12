@@ -1,16 +1,15 @@
-import { Suspense } from "react";
-import { Route, Routes } from "react-router-dom";
+import { Suspense } from 'react'
+import { Route, Routes } from 'react-router-dom'
 
-import { LayoutConfig } from "~/app/main/config/layouts-config";
+import { LayoutConfig } from '~/app/main/config/layouts-config'
 
-import { ProtectRoute } from "~/app/presentation/components";
-import { FullPageLoading } from "~/app/presentation/components";
-import { IRoute } from "../../types";
+import { ProtectRoute, FullPageLoading } from '~/app/presentation/components'
+import { type IRoute } from '../../types'
 
 export const makeRoutes = (routes: IRoute[]) => {
   return routes.map((route) => {
-    console.log({ route });
-    const Layout = LayoutConfig[route.layout].component;
+    console.log({ route })
+    const Layout = LayoutConfig[route.layout].component
     if (route.routes) {
       return (
         <Route
@@ -45,7 +44,7 @@ export const makeRoutes = (routes: IRoute[]) => {
             </Routes>
           }
         />
-      );
+      )
     }
 
     return (
@@ -61,6 +60,6 @@ export const makeRoutes = (routes: IRoute[]) => {
           }
         />
       </Routes>
-    );
-  });
-};
+    )
+  })
+}

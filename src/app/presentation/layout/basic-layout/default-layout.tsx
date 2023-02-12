@@ -5,7 +5,7 @@ import { Box } from '@mui/material'
 interface Props {
   children: ReactNode
 }
-const BasicLayout = ({}: Props) => {
+const BasicLayout = ({ children }: Props) => {
   return (
     <Box
       sx={{
