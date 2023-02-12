@@ -1,23 +1,23 @@
-import { ReactNode } from "react";
+import { type ReactNode } from 'react'
 
-import { Box } from "@mui/material";
+import { Box } from '@mui/material'
 
 interface Props {
-  children: ReactNode;
+  children: ReactNode
 }
-const BasicLayout = ({ children }: Props) => {
+const BasicLayout = ({}: Props) => {
   return (
     <Box
       sx={{
-        width: "100vw",
-        height: "100vh",
-        justifyContent: "center",
-        alignItems: "center",
+        width: '100vw',
+        height: '100vh',
+        justifyContent: 'center',
+        alignItems: 'center'
       }}
     >
       {children}
     </Box>
-  );
-};
+  )
+}
 
-export default BasicLayout;
+export default BasicLayout
