@@ -1,14 +1,12 @@
-import { Suspense } from 'react'
 import { Route, Routes } from 'react-router-dom'
 
 import { LayoutConfig } from '~/app/main/config/layouts-config'
 
-import { ProtectRoute, FullPageLoading } from '~/app/presentation/components'
+import { ProtectRoute } from '~/app/presentation/components'
 import { type IRoute } from '../../types'
 
 export const makeRoutes = (routes: IRoute[]) => {
   return routes.map((route) => {
-    console.log({ route })
     const Layout = LayoutConfig[route.layout].component
     if (route.routes) {
       return (
@@ -23,7 +21,7 @@ export const makeRoutes = (routes: IRoute[]) => {
                   <ProtectRoute
                     Layout={Layout}
                     private={route.private ?? false}
-                    element={route.element}
+                    element={<>{route.element}</>}
                   />
                 }
               />
@@ -36,7 +34,7 @@ export const makeRoutes = (routes: IRoute[]) => {
                     <ProtectRoute
                       Layout={Layout}
                       private={nested.private ?? false}
-                      element={nested.element}
+                      element={<>{nested.element}</>}
                     />
                   }
                 />

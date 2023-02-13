@@ -1,5 +1,4 @@
-import { lazy } from 'react'
-import Home from '~/app/presentation/pages/home/home'
+import { Home } from '../router/lazy-routes-imports'
 import { type IRoute } from '../types'
 
 export const RoutesConfig: IRoute[] = [

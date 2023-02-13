@@ -14,7 +14,12 @@
     "sourceType": "module",
     "project": "./tsconfig.json"
   },
-  "plugins": ["react", "prettier", "eslint-plugin-prettier"],
+  "plugins": [
+    "react",
+    "prettier",
+    "eslint-plugin-prettier",
+    "eslint-import-helpers"
+  ],
   "rules": {
     "prettier/prettier": [
       "error",

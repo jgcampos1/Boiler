@@ -1,6 +1,8 @@
 Steps
 
 - [x] routing
-- [] lint
+- [x] lint
+- [x] husk
+- [x] lazy router
 - [] auth
 - [] protect routing
