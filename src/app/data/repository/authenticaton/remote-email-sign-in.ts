@@ -4,7 +4,7 @@ import { HttpMethod, HttpClient } from '~/app/data/protocols/http'
 import { RequestResponse } from '~/app/data/common/helpers'
 import { type ServiceCommand } from 'app/domain/common/command'
 import { error, success } from '~/app/domain/common/utils'
-import { EmailSignIn } from '~/app/domain/use-cases/authentication/email-sign-in'
+import { EmailSignIn } from '~/app/domain/use-cases/authentication'
 
 export class RemoteEmailSignIn implements ServiceCommand<EmailSignIn> {
   constructor(

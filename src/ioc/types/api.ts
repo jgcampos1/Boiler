@@ -1,0 +1,201 @@
+export const ApiTypes = {
+  PRODUCTS: {
+    LOAD_PRODUCTS: Symbol('LoadProducts'),
+    LOAD_PRODUCT: Symbol('LoadProduct'),
+    LOAD_PRODUCT_PRICE: Symbol('LoadProductPrice'),
+    CREATE: Symbol('CreateProduct'),
+    CREATE_PRICE: Symbol('CreateProductPrice'),
+    UPDATE: Symbol('UpdateProduct'),
+    UPDATE_PRICE: Symbol('UpdateProductPrice'),
+    DELETE: Symbol('DeleteProduct'),
+    DELETE_PRICE: Symbol('DeleteProductPrice'),
+    UPLOAD_IMAGE: Symbol('UploadProductImage'),
+    LOAD_PRODUCT_PRICES: Symbol('LoadProductPrices')
+  },
+  AUTH: {
+    USER_LOGOUT: Symbol('UserLogout'),
+    REFRESH_USER_TOKEN: Symbol('RefreshUserToken')
+  },
+  GENERAL: {
+    LOAD_BILLING_PERIOD: Symbol('LoadBillingPeriod'),
+    LOAD_PRICING_MODEL: Symbol('LoadPricingModel'),
+    LOAD_CURRENCY: Symbol('LoadCurrency'),
+    LOAD_RECURRING_METERED_USAGE: Symbol('LoadRecurringMeteredUsage'),
+    LOAD_RECURRING_USAGE_TYPE: Symbol('LoadRecurringUsageType'),
+    LOAD_BILLING_TYPE: Symbol('LoadBillingType'),
+    LOAD_COUNTRIES: Symbol('LoadCountries'),
+    LOAD_LOGS: Symbol('LoadLogs'),
+    LOAD_EVENTS: Symbol('LoadEvents'),
+    LOAD_TIMEZONES: Symbol('LoadTimezones'),
+    LOAD_LANGUAGES: Symbol('LoadLanguages'),
+    LOAD_STATES: Symbol('LoadStates'),
+    LOAD_SPREEDLY_KEY: Symbol('LoadSpreedlyKey'),
+    LOAD_PAYMENT_GATEWAYS: Symbol('LoadPaymentGateways')
+  },
+  TRANSACTIONS: {
+    LOAD_TRANSACTIONS: Symbol('LoadTransactions'),
+    LOAD_RECEIPT_HISTORIES: Symbol('LoadReceiptHistories'),
+    CREATE_RECEIPT_HISTORIES: Symbol('CreateReceiptHistories'),
+    LOAD_REFUND_REASONS: Symbol('LoadRefundReasons'),
+    CREATE_TRANSACTION_REFUND: Symbol('CreateTransactionRefund')
+  },
+  PAYOUTS: {
+    LOAD_PAYOUTS: Symbol('LoadPayouts')
+  },
+  INVOICES: {
+    LOAD_INVOICES: Symbol('LoadInvoices'),
+    LOAD_INVOICE: Symbol('LoadInvoice'),
+    UPDATE: Symbol('UpdateInvoice'),
+    LOAD_NOTES: Symbol('LoadInvoiceNotes'),
+    ADD_NOTE: Symbol('AddInvoiceNote'),
+    UPDATE_NOTE_PIN: Symbol('UpdateInvoiceNotePin'),
+    DELETE_NOTE: Symbol('DeleteInvoiceNote'),
+    UPDATE_NOTE: Symbol('UpdateInvoiceNote'),
+    ADD_INVOICE: Symbol('AddInvoice'),
+    LOAD_CREDIT_NOTES: Symbol('LoadCreditNotes'),
+    CHARGE_CUSTOMER: Symbol('AddChargeCustomer'),
+    UPDATE_STATUS: Symbol('UpdateInvoiceStatus'),
+    DUPLICATE: Symbol('DuplicateInvoice'),
+    DELETE_DRAFT: Symbol('DeleteDraft'),
+    UPDATE_INVOICE_DRAFT: Symbol('UpdateInvoiceDraft'),
+    LOAD_PDF: Symbol('LoadInvoicePdf'),
+    LOAD_INVOICE_RECEIPT_PDF: Symbol('LoadInvoiceReceiptPdf'),
+    SEND_INVOICE_RECEIPT_EMAIL: Symbol('SendInvoiceReceiptEmail'),
+    SEND_INVOICE_EMAIL: Symbol('SendInvoiceEmail'),
+    ADD_INVOICE_CONFIRM: Symbol('AddInvoiceConfirm'),
+    ADD_INVOICE_ITEMS: Symbol('AddInvoiceItems'),
+    UPDATE_INVOICE_ITEMS: Symbol('UpdateInvoiceItems'),
+    DELETE_INVOICE_ITEMS: Symbol('DeleteInvoiceItems'),
+    ADD_INVOICE_ITEM_COUPON: Symbol('AddInvoiceItemCoupon'),
+    ADD_INVOICE_COUPON: Symbol('AddInvoiceCoupon'),
+    DELETE_INVOICE_COUPON: Symbol('DeleteInvoiceCoupon'),
+    DELETE_INVOICE_ITEM_COUPON: Symbol('DeleteInvoiceItemCoupon'),
+    CREATE_INVOICE_NOW: Symbol('CreateInvoiceNow'),
+    LOAD_INVOICE_HASH: Symbol('LoadInvoiceHash'),
+    ADD_INVOICE_HASH: Symbol('AddInvoiceHash'),
+    LOAD_PUBLIC_PDF: Symbol('LoadInvoicePublicPdf')
+  },
+  ORDERS: {
+    LOAD_ORDERS: Symbol('LoadOrders'),
+    LOAD_ORDER: Symbol('LoadOrder'),
+    ADD_NOTE: Symbol('AddOrderNote'),
+    UPDATE_NOTE: Symbol('UpdateOrderNote'),
+    DELETE_NOTE: Symbol('DeleteOrderNote'),
+    UPDATE_NOTE_PIN: Symbol('UpdateOrderNotePin'),
+    LOAD_NOTES: Symbol('LoadOrderNotes'),
+    LOAD_ITEMS: Symbol('LoadOrderItems'),
+    ADD_ORDER_HASH: Symbol('AddOrderHash'),
+    LOAD_ORDER_HASH: Symbol('LoadOrderHash'),
+    CANCEL_ORDER: Symbol('CancelOrder'),
+    LOAD_PDF: Symbol('LoadOrderPdf')
+  },
+  CUSTOMERS: {
+    LOAD_CUSTOMER_PAYMENT_METHODS: Symbol('LoadCustomerPaymentMethods'),
+    LOAD_CUSTOMER_PAYMENT_METHOD: Symbol('LoadCustomerPaymentMethod'),
+    LOAD_CUSTOMERS: Symbol('LoadCustomers'),
+    ADD_CUSTOMER: Symbol('AddCustomer'),
+    UPDATE_METADATA: Symbol('UpdateMetadata'),
+    UPDATE_COUPON: Symbol('UpdateCoupon'),
+    LOAD_CUSTOMER: Symbol('LoadCustomer'),
+    DELETE_CUSTOMER: Symbol('DeleteCustomer'),
+    UPDATE_CUSTOMER: Symbol('UpdateCustomer'),
+    ADD_CUSTOMER_ACH: Symbol('AddCustomerAch'),
+    LOAD_CUSTOMER_ACCOUNT_HOLDER_TYPES: Symbol(
+      'LoadCustomerAccountHolderTypes'
+    ),
+    ADD_CUSTOMER_NOTES: Symbol('AddCustomerNotes'),
+    LOAD_CUSTOMER_NOTES: Symbol('LoadCustomerNotes'),
+    DELETE_CUSTOMER_NOTES: Symbol('DeleteCustomerNotes'),
+    UPDATE_CUSTOMER_NOTES: Symbol('UpdateCustomerNotes'),
+    DELETE_CUSTOMER_PAYMENT_METHOD: Symbol('DeleteCustomerPaymentMethod'),
+    UPDATE_CUSTOMER_PAYMENT_METHODS: Symbol('UpdateCustomerPaymentMethods'),
+    UPDATE_CUSTOMER_PAYMENT_METHOD: Symbol('UpdateCustomerPaymentMethod'),
+    ADD_CUSTOMER_PAYMENT_METHOD: Symbol('AddCustomerPaymentMethod')
+  },
+  PAYMENTS: {
+    LOAD_PAYMENT: Symbol('LoadPayment'),
+    UPDATE: Symbol('UpdatePayment'),
+    LOAD_PAYMENTS: Symbol('LoadPayments'),
+    CREATE_PAYMENT: Symbol('CreatePayments'),
+    CREATE_RECURRING_PAYMENT: Symbol('CreateRecurringPayment'),
+    LOAD_NOTES: Symbol('LoadPaymentNotes'),
+    ADD_NOTE: Symbol('AddPaymentNote'),
+    DELETE_NOTE: Symbol('DeletePaymentNote'),
+    UPDATE_NOTE: Symbol('UpdatePaymentNote'),
+    UPDATE_NOTE_PIN: Symbol('UpdateInvoiceNotePin')
+  },
+  PENDING_INVOICE_ITEMS: {
+    CREATE_PENDING_INVOICE_ITEMS: Symbol('CreatePendingInvoiceItems'),
+    LOAD_PENDING_INVOICE_ITEMS: Symbol('LoadPendingInvoiceItems'),
+    DELETE_PENDING_INVOICE_ITEMS: Symbol('DeletePendingInvoiceItems'),
+    UPDATE_PENDING_INVOICE_ITEMS: Symbol('UpdatePendingInvoiceItems')
+  },
+  CREDIT_NOTES: {
+    LOAD_CREDIT_NOTES: Symbol('LoadCreditNotes'),
+    UPDATE: Symbol('UpdateCreditNote'),
+    LOAD_NOTES: Symbol('LoadCreditNoteNotes'),
+    ADD_NOTE: Symbol('AddCreditNoteNote'),
+    DELETE_NOTE: Symbol('DeleteCreditNoteNote'),
+    UPDATE_NOTE: Symbol('UpdateCreditNoteNote'),
+    UPDATE_NOTE_PIN: Symbol('UpdateCreditNoteNotePin'),
+    LOAD_CREDIT_NOTE_PDF: Symbol('LoadCreditNotePdf'),
+    LOAD_CREDIT_NOTE_REASONS: Symbol('LoadCreditNoteReasons'),
+    ISSUE_CREDIT_NOTE: Symbol('IssueCreditNote')
+  },
+  SUBSCRIPTIONS: {
+    UPDATE: Symbol('UpdateSubscription'),
+    LOAD_SUBSCRIPTION: Symbol('LoadSubscription'),
+    LOAD_SUBSCRIPTIONS: Symbol('LoadSubscriptions'),
+    CANCEL_SUBSCRIPTION: Symbol('CancelSubscription'),
+    LOAD_SUBSCRIPTIONS_INVOICES: Symbol('LoadSubscriptionsInvoices'),
+    PAUSE_SUBSCRIPTION_PAYMENT_COLLECTION: Symbol(
+      'PauseSubscriptionPaymentCollection'
+    ),
+    UPDATE_SUBSCRIPTION_ITEMS: Symbol('UpdateSubscriptionItems'),
+    ADD_SUBSCRIPTION_ITEMS: Symbol('AddSubscriptionItems'),
+    DELETE_SUBSCRIPTION_ITEMS: Symbol('DeleteSubscriptionItems'),
+    RESTART_SUBSCRIPTION_ITEMS: Symbol('RestartSubscriptionItems'),
+    UNCANCEL_SUBSCRIPTION: Symbol('UncancelSubscription'),
+    DELETE_SUBSCRIPTION_COUPON: Symbol('DeleteSubscriptionCoupon'),
+    UPDATE_SUBSCRIPTION_COUPON: Symbol('UpdateSubscriptionCoupon'),
+    ADD_SUBSCRIPTION_COUPON: Symbol('AddSubscriptionCoupon'),
+    LOAD_SUBSCRIPTION_COUPONS: Symbol('LoadSubscriptionCoupons')
+  },
+  COUPONS: {
+    LOAD_COUPONS: Symbol('LoadCoupons'),
+    ADD_COUPON: Symbol('AddCoupon'),
+    LOAD_COUPON: Symbol('LoadCoupon'),
+    UPDATE_COUPON: Symbol('UpdateCoupon'),
+    DELETE_COUPON: Symbol('DeleteCoupon'),
+    UPDATE_COUPON_CODE_ARCHIVE: Symbol('UpdateCouponCodeArchive'),
+    UPDATE_COUPON_CODE_UNARCHIVE: Symbol('UpdateCouponCodeUnarchive'),
+    ADD_COUPON_CODE: Symbol('AddCouponCode'),
+    UPDATE_COUPON_CODE: Symbol('UpdateCouponCode'),
+    LOAD_COUPON_CODES: Symbol('LoadCouponCodes'),
+    LOAD_COUPON_CODE: Symbol('LoadCouponCode'),
+    LOAD_COUPON_BY_CODE: Symbol('LoadCouponByCode'),
+    LOAD_COUPON_VALIDATION_SUBSCRIPTION: Symbol(
+      'LoadCouponValidationSubscription'
+    )
+  },
+  PAYMENT_LINKS: {
+    CREATE_PAYMENT_LINK: Symbol('CreatePaymentLink'),
+    LOAD_PAYMENT_LINKS: Symbol('LoadPaymentLinks'),
+    LOAD_PAYMENT_LINK_HASH: Symbol('LoadPaymentLinkHash'),
+    CREATE_PAYMENT_LINK_HASH: Symbol('CreatePaymentLinkHash'),
+    LOAD_PAYMENT_LINK: Symbol('LoadPaymentLink'),
+    UPDATE_PAYMENT_LINK: Symbol('UpdatePaymentLink'),
+    ADD_PAYMENT_LINK_NOTE: Symbol('AddPaymentLinkNote'),
+    UPDATE_PAYMENT_LINK_NOTE: Symbol('UpdatePaymentLinkNote'),
+    LOAD_PAYMENT_LINK_NOTE: Symbol('LoadPaymentLinkNote'),
+    DELETE_PAYMENT_LINK_NOTE: Symbol('DeletePaymentLinkNote'),
+    UPDATE_PAYMENT_LINK_NOTE_PIN: Symbol('UpdatePaymentLinkNotePin'),
+    UPLOAD_PAYMENT_LINK_IMAGE: Symbol('UploadPaymentLinkImage'),
+    ACTIVATE_PAYMENT_LINK: Symbol('ActivatePaymentLink'),
+    DEACTIVATE_PAYMENT_LINK: Symbol('DeactivatePaymentLink')
+  },
+  TENANTS: {
+    LOAD_TENANTS_PUBLIC: Symbol('LoadTenantsPublic'),
+    LOAD_TENANT: Symbol('LoadTenant')
+  }
+}

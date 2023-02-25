@@ -1,7 +1,14 @@
-import { Container, Text } from './home-styles'
+import { Container, Content } from './home-styles'
+
+import { TitleText } from '../../components'
+
 const Home = () => (
   <Container>
-    <Text>oi sou eu de novo</Text>{' '}
+    <Content>
+      <TitleText toUpperCase fontSize={28}>
+        Olá, bem vindo ao boiler
+      </TitleText>
+    </Content>
   </Container>
 )
 

@@ -1,19 +1,19 @@
-import { Home } from '../router/lazy-routes-imports'
+import { Home, Login } from '../router/lazy-routes-imports'
 import { type IRoute } from '../types'
 
 export const RoutesConfig: IRoute[] = [
   {
     path: '/home',
     name: 'Home',
-    private: false,
+    private: true,
     element: <Home />,
-    layout: 'DefaultLayout'
+    layout: 'ProtectLayout'
   },
   {
     path: '/login',
     name: 'Login',
     private: false,
-    element: <Home />,
+    element: <Login />,
     layout: 'DefaultLayout'
   }
 ]
